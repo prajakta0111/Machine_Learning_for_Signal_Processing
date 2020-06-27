@@ -13,3 +13,8 @@ We will use a non-Gausianity metric, called “kurtosis,” for this.
 We will be standardizing the vectorized images by subtracting their sample means and by dividing by their
 sample standard deviation.
 Then we will calculate the kurtosis. The best image will be chosen based on this.
+The images that we have are:
+
+<img align="left" width="250" height="250" src="https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/images/luddy1.jpeg">
+<img align="left" width="250" height="250" src="https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/images/luddy2.jpeg">
+<img  width="250" height="250" src="https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/images/luddy3.jpeg">
