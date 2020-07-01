@@ -28,3 +28,15 @@ optimization goal. Differentiate the objective function, λ with respect to the 
 Once you subtract the contribution of the first eigenvector, your X won’t have
 any variation along the direction defined by the first eigenvector. Repeat your gradient ascent-based eigendecomposition process on the new X matrix which
 doesn’t contain any compoent from the first eigenvector.
+
+
+[Eigenvectors for two notes](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/02_Eigenvectors_for_two_notes.ipynb)
+
+flute.mat is a matrix representation of the two musical notes played by a flute. The input matrix X has 143 column vectors, each of which has 128 frequency elements. Estimate two eigenvectors from this by using the program we used in [Gradient_ascent_eigendecomposition](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/01_Gradient_ascent_eigendecomposition.ipynb). This time, since the
+eigenvectors are multidimensional, you need to draw a graph of each of them rather than a
+line. Once again, it will look like the tall two-column matrix. Now you know the representative spectra for the two notes. How would you recover their
+temporal activations? They will be two row vectors for the two notes, respectively. You need
+to come up with an equation for this, and plot the activation (row) vectors you got from this
+procedure in the report. Finally, since you know the basis vectors and their activations, you can recover each source
+separately. How would you recover the first note? Come up with an equation for this, and
+plot the result.
