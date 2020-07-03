@@ -1,6 +1,6 @@
 # Machine_Learning_for_Signal_Processing
 
-[Central Limit Theorem](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/00_Central_Limit_theorem.ipynb)
+## [Central Limit Theorem](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/00_Central_Limit_theorem.ipynb)
 
 
 According to CLT, the sum of random variables gets closer to a Gaussian distribution. If
@@ -21,7 +21,7 @@ The images that we have are:
 
 
 
-[Gradient_ascent_eigendecomposition](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/01_Gradient_ascent_eigendecomposition.ipynb)
+## [Gradient_ascent_eigendecomposition](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/01_Gradient_ascent_eigendecomposition.ipynb)
 
 We are looking for the largest eigenvalue, we would like to maximize this value, which is our
 optimization goal. Differentiate the objective function, λ with respect to the parameters. The derivative is the gradient direction. Using the gradient direction, update your parameter. Your learning rate should be a small number so that the update is gradual. Be careful with the sign of the gradient. This time, you are MAXIMIZING your objective function, rather than MINIMIZING it. So, the update algorithm is actually gradient ascent, not descent. Another tricky part is the constraint that the eigenvector has to be a unit vector.
@@ -30,7 +30,7 @@ any variation along the direction defined by the first eigenvector. Repeat your 
 doesn’t contain any compoent from the first eigenvector.
 
 
-[Eigenvectors for two notes](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/02_Eigenvectors_for_two_notes.ipynb)
+## [Eigenvectors for two notes](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/02_Eigenvectors_for_two_notes.ipynb)
 
 flute.mat is a matrix representation of the two musical notes played by a flute. The input matrix X has 143 column vectors, each of which has 128 frequency elements. Estimate two eigenvectors from this by using the program we used in [Gradient_ascent_eigendecomposition](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/01_Gradient_ascent_eigendecomposition.ipynb). This time, since the
 eigenvectors are multidimensional, you need to draw a graph of each of them rather than a
