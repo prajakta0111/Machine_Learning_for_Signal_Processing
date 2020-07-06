@@ -58,4 +58,18 @@ frame (which should start from (N + 1)’th sample, and so on. Since you moved j
 half of the frame size, your frames are overlapping each other by 50%.
 4. Apply the DFT matrix to your data matrix, i.e. F X. This is your spectrogram with complex
 values. See how it looks like (by taking magnitudes and plotting). Locate two thin horizontal
-lines. They are from the beep sound. Note that due to the conjugacy your spectrogram is
+lines. They are from the beep sound. Note that due to the conjugacy your spectrogram is 
+mirrored vertically. The bottom half is a mirrored version of the top half in terms of their
+magnitudes, although their imaginary parts are with a different sign (complex conjugate).
+The spectrograms you’ve seen in class are the top half of a spectrogram, because the bottom
+half has no useful information (except for the flipped phase). This is why you see two beeper
+lines in your spectrogram. Anyway, locate them, and make the entire row zero.
+5. Apply the inverse DFT matrix, which you can also create by using the equation in L4 S12.
+Let’s call this F. Since it’s the inverse transform, F∗F ≈ I (you can check it, although the
+off diagonals might be a very small number rather than zero). You apply this matrix to your
+spectrogram, which is free from the beep tones, to get back to the recovered version of your
+data matrix, Xˆ . In theory this should give you a real-valued matrix, but you’ll still see some
+imaginary parts with a very small value. Ignore them by just taking the real part. Reverse
+ the procedure we did earlier to get the time domain signal. Basically it must be a procedure that
+transpose every column vector of Xˆ and overlap-and-add the right half of t-th row vector
+with the left half of the (t + 1)-th row vector and so on. Listen to the signal to check if the beep tones are gone.
