@@ -47,6 +47,7 @@ STFT, so we will manually erase the beep sound from this signal to recover
 the clean speech source. If you have a perfect pitch, you might be able to know the pitch of
 the beep, but assuming that we don’t, we have to see the spectrogram to find
 out the beep frequency. First off, create a DFT matrix F.
+
 Prepare your data matrix X. You extract the first frame of N samples from the input signal,
 and apply a Hann window (or any other windows that can overlap-and-add to one). What
 that means is that from the definition of Hann window1
@@ -56,7 +57,8 @@ vector of the data matrix X. Move by N/2 samples. Extract another frame of N sam
 and apply the window. This goes to the second column vector of X. Do it for your third
 frame (which should start from (N + 1)’th sample, and so on. Since you moved just by the
 half of the frame size, your frames are overlapping each other by 50%.
-4. Apply the DFT matrix to your data matrix, i.e. F X. This is your spectrogram with complex
+
+Apply the DFT matrix to your data matrix, i.e. F X. This is your spectrogram with complex
 values. See how it looks like (by taking magnitudes and plotting). Locate two thin horizontal
 lines. They are from the beep sound. Note that due to the conjugacy your spectrogram is 
 mirrored vertically. The bottom half is a mirrored version of the top half in terms of their
@@ -64,7 +66,8 @@ magnitudes, although their imaginary parts are with a different sign (complex co
 The spectrograms you’ve seen in class are the top half of a spectrogram, because the bottom
 half has no useful information (except for the flipped phase). This is why you see two beeper
 lines in your spectrogram. Anyway, locate them, and make the entire row zero.
-5. Apply the inverse DFT matrix, which you can also create by using the equation in L4 S12.
+
+Apply the inverse DFT matrix, which you can also create by using the equation in L4 S12.
 Let’s call this F. Since it’s the inverse transform, F∗F ≈ I (you can check it, although the
 off diagonals might be a very small number rather than zero). You apply this matrix to your
 spectrogram, which is free from the beep tones, to get back to the recovered version of your
