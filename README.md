@@ -76,3 +76,15 @@ imaginary parts with a very small value. Ignore them by just taking the real par
  the procedure we did earlier to get the time domain signal. Basically it must be a procedure that
 transpose every column vector of Xˆ and overlap-and-add the right half of t-th row vector
 with the left half of the (t + 1)-th row vector and so on. Listen to the signal to check if the beep tones are gone.
+
+
+## [Parallax](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/04_Parralax.ipynb)
+You live in a planet far away from the earth. Your solar system belongs to a galaxy, which
+is about to merge with another galaxy (it is not rare in the outer space, but don’t worry, the
+merger takes a few billions of years). Anyhow, because of this merger, in the deep sky you
+see lots of stars from your galaxy as well as the other stars in the other neighboring galaxy.
+Of course you don’t know which one is from which galaxy though.
+
+You are going to use a technique called “parallax” to solve this problem. It’s actually very
+similar to the computer vision algorithm called “stereo matching,” where stereophonic cameras
+find out the 3D depth information from the visual scene. That’s actually 
