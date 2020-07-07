@@ -87,4 +87,15 @@ Of course you don’t know which one is from which galaxy though.
 
 You are going to use a technique called “parallax” to solve this problem. It’s actually very
 similar to the computer vision algorithm called “stereo matching,” where stereophonic cameras
-find out the 3D depth information from the visual scene. That’s actually 
+find out the 3D depth information from the visual scene. That’s actually why we humans can
+recognize the distance of a visual object (we have two eyes). See Figure 1 for an example.
+
+Let’s get back to your remote planet. In your planet, parallax works by taking a picture of
+the deep sky in June and another one in December (yes, you have 12 months there, too). If
+you take a picture of the deep sky, you see the stars nearby (i.e. the ones in your galaxy)
+changes their position much more in the two pictures, while the starts far way (i.e. the ones
+in the neighboring galaxy) change their position less
+
+Perform k-means clustering on this disparity dataset. Find out the cluster means and report
+the values. Which one do you think corresponds to the stars in your galaxy and which is for
+the other galaxy? Why do you think so? Justify your answer in the report.
