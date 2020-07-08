@@ -99,3 +99,10 @@ in the neighboring galaxy) change their position less
 Perform k-means clustering on this disparity dataset. Find out the cluster means and report
 the values. Which one do you think corresponds to the stars in your galaxy and which is for
 the other galaxy? Why do you think so? Justify your answer in the report.
+
+## [GMM_for_Parallax](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/05_GMM_for_Parallax.ipynb)
+Implement your own EM algorithm for GMM and propose an alternative solution to the
+previous parallax problem. Report the estimated means, variances, and prior weights. Explain
+which one you prefer between the k-means solution and the GMM results. Justify your answer
+
+## [DCT_and_PCA](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/06_DCT_PCA.ipynb)
