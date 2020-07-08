@@ -106,3 +106,20 @@ previous parallax problem. Report the estimated means, variances, and prior weig
 which one you prefer between the k-means solution and the GMM results. Justify your answer
 
 ## [DCT_and_PCA](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/06_DCT_PCA.ipynb)
+Load an image and divide the 3D array
+(1024 × 768 × 3) into the three channels. Let’s call them XR, XG, and XB.
+Randomly choose a block of 8 consecutive (entire) rows from XR, e.g. XR
+(113:120,1:768) This will be a matrix of 8 ×768. Collect another 2 such blocks, each
+of which starts from a randomly chosen first row position. Move on to the green channel and
+extract another three 8 × 768 blocks. Blue channel, too. You collected 9 blocks from all three
+channels. Now, concatenate all of them horizontally. This will be a matrix of 8 × 6912 pixels.
+Let’s call it R. Subtract the mean and calculate the covariance matrix, which will be an 8 ×8
+matrix. Do eigendecomposition  and extract 8 eigenvectors, each of
+which is with 8 dimensions. Yes, you did PCA. Imagine that you convert the original 8×6912
+matrix into the other space using the learned eigenvectors. For example, if your eigenvector
+matrix is W, than W>R will do it. Plot your W and compare it to the DCT matrix shown
+We just saw that PCA might be able to replace DCT. But, it seems to depend on the quality
+of PCA. One way to improve the quality is to increase the size of your data set, so that you
+can start from a good sample covariance matrix. To do so, go back to the procedure in 4.2.
+But, this time increase the total number of blocks to 90 (30 blocks per channel). Note that
+each block is with 8×768 pixels once again. 
