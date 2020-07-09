@@ -123,3 +123,12 @@ of PCA. One way to improve the quality is to increase the size of your data set,
 can start from a good sample covariance matrix. To do so, go back to the procedure in 4.2.
 But, this time increase the total number of blocks to 90 (30 blocks per channel). Note that
 each block is with 8×768 pixels once again. 
+
+## [Instantaneous_Source_Separation](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/Instantaneous_Source_Separation.ipynb)
+
+From x ica 1.wav to x ica 20.wav are 20 recordings of my song, Homework 3. Each recording
+has N time domain samples. In this music there are K unknown number of musical sources
+played at the same time. In other words, it could simulate the situation that 20 of my students
+come to my gig and record my band’s play from 20 different locations (sounds unethical, so I
+wouldn’t invite you guys, no worries). This can be seen as a situation where the source was
+mixed up with a 20 × K mixing matrix A to the K sources to create the 20 channel mixture
