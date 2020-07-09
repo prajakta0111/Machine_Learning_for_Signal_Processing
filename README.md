@@ -129,6 +129,15 @@ each block is with 8×768 pixels once again.
 From x ica 1.wav to x ica 20.wav are 20 recordings of my song, Homework 3. Each recording
 has N time domain samples. In this music there are K unknown number of musical sources
 played at the same time. In other words, it could simulate the situation that 20 of my students
-come to my gig and record my band’s play from 20 different locations (sounds unethical, so I
-wouldn’t invite you guys, no worries). This can be seen as a situation where the source was
-mixed up with a 20 × K mixing matrix A to the K sources to create the 20 channel mixture
+come to my gig and record my band’s play from 20 different locations. This can be seen as a situation where the source was
+mixed up with a 20 × K mixing matrix A to the K sources to create the 20 channel mixture.
+
+First, you don’t like the fact that there are too many recordings for this separation problem,
+because you have a feeling that the number of sources is a lot smaller than 20. So, you decided
+to do a dimension redcution first, before you actually go ahead and do ICA. For this, you
+choose to perform PCA with the whitening option. Apply your PCA algorithm on your data
+matrix X, a 20 × N matrix. Don’t forget to whiten the data. Make a decision as to how
+many dimensions to keep, which will correspond to your K. Hint: take a very close look at
+your eigenvalues.On your whitened/dimension reduced data matrix Z (K × N), apply ICA
+
+ Enjoy your separated music
