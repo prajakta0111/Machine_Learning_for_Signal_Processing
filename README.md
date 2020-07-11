@@ -124,7 +124,7 @@ can start from a good sample covariance matrix. To do so, go back to the procedu
 But, this time increase the total number of blocks to 90 (30 blocks per channel). Note that
 each block is with 8×768 pixels once again. 
 
-## [Instantaneous_Source_Separation](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/Instantaneous_Source_Separation.ipynb)
+## [Instantaneous_Source_Separation](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/07_Instantaneous_Source_Separation.ipynb)
 
 From x ica 1.wav to x ica 20.wav are 20 recordings of my song, Homework 3. Each recording
 has N time domain samples. In this music there are K unknown number of musical sources
