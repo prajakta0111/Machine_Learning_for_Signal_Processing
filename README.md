@@ -149,8 +149,7 @@ such as S ≈ WSHS. You know, WS is a set of basis vectors. If you discard the c
 conjugates, your S is a 513 × 990 matrix (the number of columns could be slightly different
 depending on how you implemented STFT). If you choose to learn this NMF model with 30
 basis vectors, then WS ∈ R
-513×30
-+ , where R+ is a set of nonnegative real numbers. You’re
+513×30, where R+ is a set of nonnegative real numbers. You’re
 going to use WS for your separation.2
 
 Learn another NMF model from trn.wav, which is another training signal for your noise.
@@ -164,8 +163,7 @@ W = [WSWN ]. As you are very sure that the basis vectors for your test signal sh
 the same with the ones you trained from each of the sources, you initialize your W matrix with
 the trained ones and don’t even update it during this third NMF. Instead, you learn a whole
 new H ∈ R
-60×131
-+ that tells you the activation of the basis vectors for a given time frame.
+60×131 that tells you the activation of the basis vectors for a given time frame.
 Implementation is simple. Skip the update for W. Update H by using W = [WSWN ] and
 Y . Repeat.
 But, you need its corresponding phase
