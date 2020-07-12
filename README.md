@@ -141,4 +141,35 @@ many dimensions to keep, which will correspond to your K. Hint: take a very clos
 your eigenvalues.On your whitened/dimension reduced data matrix Z (K × N), apply ICA
 Enjoy your separated music
 
-## [Single-channel Source Separation]()
+## [Single-channel Source Separation](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/09_Single_channel_Source_Separation.ipynb)
+
+trs.wav is a speech signal of a speaker. Convert this signal into a spectrogram and take
+its magnitudes. Let’s call this magnitude spectrogram S. Learn an NMF model out of this
+such as S ≈ WSHS. You know, WS is a set of basis vectors. If you discard the complex
+conjugates, your S is a 513 × 990 matrix (the number of columns could be slightly different
+depending on how you implemented STFT). If you choose to learn this NMF model with 30
+basis vectors, then WS ∈ R
+513×30
++ , where R+ is a set of nonnegative real numbers. You’re
+going to use WS for your separation.2
+
+Learn another NMF model from trn.wav, which is another training signal for your noise.
+From this get WN .
+x nmf.wav is a noisy speech signal made of the same speaker’s different speech and the same
+type of noise you saw. By using our third NMF model, we’re going to denoise this one.
+Load this signal and convert it into a spectrogram.
+What this means is that for this third NMF model, instead of learning new basis vectors, you
+reuse the ones you trained from the previous two models as your basis vectors for testing:
+W = [WSWN ]. As you are very sure that the basis vectors for your test signal should be
+the same with the ones you trained from each of the sources, you initialize your W matrix with
+the trained ones and don’t even update it during this third NMF. Instead, you learn a whole
+new H ∈ R
+60×131
++ that tells you the activation of the basis vectors for a given time frame.
+Implementation is simple. Skip the update for W. Update H by using W = [WSWN ] and
+Y . Repeat.
+But, you need its corresponding phase
+information to convert it back to the time domain. It might not be perfect, but the phase matrix of the input mixture, ∠X = X
+Y
+, can be used to recover the complex valued spectrogram
+of the speech source. Then, you can get the time domain signal. Submit your signal.
