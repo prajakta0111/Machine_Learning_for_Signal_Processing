@@ -139,5 +139,6 @@ choose to perform PCA with the whitening option. Apply your PCA algorithm on you
 matrix X, a 20 × N matrix. Don’t forget to whiten the data. Make a decision as to how
 many dimensions to keep, which will correspond to your K. Hint: take a very close look at
 your eigenvalues.On your whitened/dimension reduced data matrix Z (K × N), apply ICA
+Enjoy your separated music
 
- Enjoy your separated music
+## [Single-channel Source Separation]()
