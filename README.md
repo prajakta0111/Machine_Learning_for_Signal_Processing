@@ -170,3 +170,14 @@ information to convert it back to the time domain. It might not be perfect, but 
 Y
 , can be used to recover the complex valued spectrogram
 of the speech source. Then, you can get the time domain signal. Submit your signal.
+
+## [Motor Imagery](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/10_Motor_Imagery.ipynb)
+
+eeg.mat has the training and testing samples and their labels. Use them to replicate classification experiments in Module 5.
+But, instead of PCA, use NMF to reduce the dimension. Differently from PCA, where you can keep learning a new eigenvector on top of the previously learned ones, NMF requires you
+to run its multiplicative update rules with a pre-defined number of basis vectors. Learn 7
+different pairs of W and H, by varying their rank as in S37: {2, 4, 6, 8, 10, 15, 20}, meaning
+you need to run the NMF algorithm 7 different times by differently initializing them, and by
+setting up different number of basis vectors. 
+With eigenvectors, you transposed them and multiplied it to the data matrix from the lefthand side (S8). But, you can’t do that anymore, because NMF basis vectors are not orthogonal. Instead, you can just use the H matrix as if it’s the dimension-reduced version of your
+data matrix, Z in S8. Instead of using Naiıve Bayes classification, we will do a kNN classification. 
