@@ -181,3 +181,5 @@ you need to run the NMF algorithm 7 different times by differently initializing 
 setting up different number of basis vectors. 
 With eigenvectors, you transposed them and multiplied it to the data matrix from the lefthand side (S8). But, you can’t do that anymore, because NMF basis vectors are not orthogonal. Instead, you can just use the H matrix as if it’s the dimension-reduced version of your
 data matrix, Z in S8. Instead of using Naiıve Bayes classification, we will do a kNN classification. 
+
+## [When to applaud?](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/11_When_to_applaud.ipynb)
