@@ -183,3 +183,5 @@ With eigenvectors, you transposed them and multiplied it to the data matrix from
 data matrix, Z in S8. Instead of using Naiıve Bayes classification, we will do a kNN classification. 
 
 ## [When to applaud?](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/11_When_to_applaud.ipynb)
+
+## [Multidimensional_Scaling](https://github.com/prajakta0111/Machine_Learning_for_Signal_Processing/blob/master/12_Multidimensional_Scaling.ipynb)
